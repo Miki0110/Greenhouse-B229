@@ -1,5 +1,5 @@
-#ifndef Testing
-#define Testing
+#ifndef Sensors
+#define Sensors
 
 #include <string>
 #include <time.h>
@@ -7,10 +7,10 @@
 //time_t timer;
 std::string;
 
-class Plants
+class Sensor
 {
 private:
 public:
 };
 
-#endif //Testing
+#endif //Sensors

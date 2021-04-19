@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MinSizeRel/Tomato_example.exe"
+			"path" : "Release/Tomato_example.exe"
 		},
 		{
-			"path" : "MinSizeRel/Tomato_example.pdb"
+			"path" : "Release/Tomato_example.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -45,14 +45,14 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Glenn/Desktop/UNI/P2/SSP_Greenhouse/include"
+					"path" : "C:/Users/Glenn/Desktop/Greenhouse-B229/include"
 				}
 			],
 			"language" : "CXX",
@@ -74,7 +74,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
