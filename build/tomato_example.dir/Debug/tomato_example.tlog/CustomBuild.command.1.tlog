@@ -1,0 +1,10 @@
+^C:\USERS\GLENN\DESKTOP\UNI\P2\SSP_GREENHOUSE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Glenn/Desktop/UNI/P2/SSP_Greenhouse -BC:/Users/Glenn/Desktop/UNI/P2/SSP_Greenhouse/build --check-stamp-file C:/Users/Glenn/Desktop/UNI/P2/SSP_Greenhouse/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

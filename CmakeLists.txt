@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.17)
+
+project(greenhouse_control)
+
+add_executable(Tomato_example src/Tomato_example.cpp)
+target_include_directories(Tomato_example PRIVATE include)

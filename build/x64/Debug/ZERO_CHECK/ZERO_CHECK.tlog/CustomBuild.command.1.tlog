@@ -1,0 +1,10 @@
+^C:\USERS\GLENN\DESKTOP\UNI\P2\SSP_GREENHOUSE\BUILD\CMAKEFILES\CEFB2184C1EF32C978BDA6084954434F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Glenn/Desktop/UNI/P2/SSP_Greenhouse -BC:/Users/Glenn/Desktop/UNI/P2/SSP_Greenhouse/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Glenn/Desktop/UNI/P2/SSP_Greenhouse/build/greenhouse_control.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
