@@ -2,5 +2,11 @@ cmake_minimum_required(VERSION 3.17)
 
 project(greenhouse_control)
 
+add_subdirectory(libs/SFML)
+
+include_directories(libs/SFML/include)
+
 add_executable(Tomato_example src/Tomato_example.cpp)
-target_include_directories(Tomato_example PRIVATE include)
+add_executable(imgui_example src/imgui_example.cpp)
+target_include_directories(Tomato_example imgui_example PRIVATE include)
+target_link_libraries(Tomato_example imgui_example sfml-graphics sfml-system)
