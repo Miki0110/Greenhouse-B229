@@ -10,6 +10,7 @@ std::string;
 class Sensor
 {
 private:
+
 public:
 };
 
