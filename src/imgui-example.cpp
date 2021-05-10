@@ -244,5 +244,5 @@ int main()
 
     ImGui::SFML::Shutdown();
 
-    return 0;
+    return 0; //all
 }
