@@ -13,7 +13,7 @@ class TemperatureSensor //UnderClass
 private:
     double Value = 0;
     double inputValue = 0;
-    Simulator &the_connected_sim;
+    Asbjrn::Simulator &the_connected_sim;
 
 public:
     Sensor(Simulator &sim) : the_connected_sim(sim)

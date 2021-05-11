@@ -3,8 +3,9 @@
 
 #include <string>
 #include <time.h>
-#include <Simulator>
+#include <Simulator.h>
 
+;
 //time_t timer;
 std::string;
 
@@ -20,13 +21,13 @@ public:
     {
         Value = 5; ///
     };
-    double getValue() { return the_connected_sim.getTemperature(); };
+    double getValue() { return the_connected_sim.getValue(); };
     double getInputValue() { return inputValue; };
 };
 
 void getInputValue()
 {
-    GUI.Sim.get
+    // GUI.Sim.get
 }
 
 #endif //Sensors

@@ -25,6 +25,7 @@ int main(int argc, char const *argv[])
 
     while (window.isOpen())
     {
+        clock_t startTime = clock();
 
         // check all the window's events that were triggered since the last
         // iteration of the loop
@@ -44,7 +45,21 @@ int main(int argc, char const *argv[])
 
         // end the current frame
         window.display();
+
+        //Calculate the running speed
+        clock_t endTime = clock();
+        clock_t clockTicksTaken = endTime - startTime;
+        double timeInSeconds = clockTicksTaken / (double)CLOCKS_PER_SEC;
     }
 
     return 0;
 }
+
+/*
+lock_t startTime = clock();
+doSomeOperation();
+clock_t endTime = clock();
+clock_t clockTicksTaken = endTime - startTime;
+double timeInSeconds = clockTicksTaken / (double) CLOCKS_PER_SEC;
+
+*/
