@@ -19,22 +19,23 @@ class Simulator //Class
 {
 private:
     double currentTime = 0;
-    double WaterValue = 0;
+    float WaterValue = 0;
     bool LampValue = 0;
-    double TotalLightHours = 0;
+    float TotalLightHours = 0;
 
-    double WaterValueChange = 0;
-    double TotalLightHourschange = 1;
+    float WaterValueChange = 0;
+    float TotalLightHourschange = 1;
 
     //Simulator& the_connected_sim;
 
 public:
     double getValue() { return Value; };
-    double getWaterValue() { return WaterValue; };
-    void addWater(double newWater){WaterValue = +newWater};
+    float getWaterValue() { return WaterValue; };
+    void addWater(float newWater){WaterValue = +newWater};
     bool getLampValue() { return LampValue; };
+    void setLampValue(bool i) { LampValue = i; };
     bool getTimeValue() { return currentTime; };
-    double getTotalLightValue(){return TotalLightHours};
+    float getTotalLightValue(){return TotalLightHours};
 
     void SetTime(int hour, int min)
     {
