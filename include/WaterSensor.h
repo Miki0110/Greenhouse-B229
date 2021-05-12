@@ -11,5 +11,5 @@ private:
     Simulator &the_connected_sim;
 
 public:
-    double measure() override { return the_connected_sim.getWaterValue(); };
+    double measure() override { return &the_connected_sim.getWaterValue(); };
 };

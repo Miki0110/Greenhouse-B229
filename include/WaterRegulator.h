@@ -1,17 +1,15 @@
 #include <string>
 #include <time.h>
 #include "Simulator.h"
-#include "Sensors.h"
+#include "Regulators.h"
 
-class WaterRegulator : public BaseSensor
+class WaterRegulator : public BaseRegulator
 {
 private:
-    double Value = 0;
-    double rawMeasurementData;
-    Simulator & the_connected_sim;
-
+    Simulator &the_connected_sim;
+    
 public:
-    double measure() override { return the_connected_sim.getWaterValue(); };
+    //double measure() override { return the_connected_sim.getWaterValue(); };
    
-    //void regulate(double newWater) override {&the_connected_sim.addWater(newWater)};
+    void regulate(float newWater) override {&the_connected_sim.addWater(newWater);};
 };
