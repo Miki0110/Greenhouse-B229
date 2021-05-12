@@ -1,33 +1,30 @@
-#ifndef Plants
-#define Plants
 
 #include <string>
 #include <time.h>
 
-//time_t timer;
-std::string;
-
 class Plant
 {
 private:
-    double lightIdeal = 0;
-    double waterIdeal = 0;
-    double humidityDirtIdeal = 0;
-    double humidityAirIdeal = 0;
-    double pHIdeal = 0;
-    double temperatureIdeal = 0;
+    std::string plantName;
+    int lightIdeal[2] = {0, 0};
+    int waterIdeal[2] = {0, 0};
+    int humidityDirtIdeal[2] = {0, 0};
+    int humidityAirIdeal[2] = {0, 0};
+    int pHIdeal[2] = {0, 0};
+    int temperatureIdeal[2] = {0, 0};
 
 public:
-    double getLightIdeal() { return lightIdeal; };
-    double getWaterIdeal() { return waterIdeal; };
-    double getHumidityDirtIdeal() { return humidityDirtIdeal; };
-    double getHumidityAirIdeal() { return humidityAirIdeal; };
-    double getpHIdeal() { return pHIdeal; };
-    double getTemeratureIdeal() { return temperatureIdeal; };
+    Plant(int lightMax, int lightMin, int waterMax, int waterMin)
+    {
+        lightIdeal[0] = lightMin;
+        lightIdeal[1] = lightMax;
+        waterIdeal[0] = waterMin;
+        waterIdeal[1] = waterMax;
+    };
+    int getLightIdeal(int i) { return lightIdeal[i]; };
+    int getWaterIdeal(int i) { return waterIdeal[i]; };
+    int getHumidityDirtIdeal(int i) { return humidityDirtIdeal[i]; };
+    int getHumidityAirIdeal(int i) { return humidityAirIdeal[i]; };
+    int getpHIdeal(int i) { return pHIdeal[i]; };
+    int getTemeratureIdeal(int i) { return temperatureIdeal[i]; };
 };
-
-#endif //Plants
-
-/*
-lys vand
-*/

@@ -18,32 +18,40 @@ derfor
 class Simulator //Class
 {
 private:
-    double Value = 0;
+    double currentTime = 0;
     double WaterValue = 0;
-    double TemperatureValue = 0;
-    double TemperatureAcceleration = 0;
-    double HumidityDirtValue = 0;
-    double HumidityAirValue = 0;
-    double pHValue = 0;
     bool LampValue = 0;
+    double TotalLightHours = 0;
+
+    double WaterValueChange = 0;
+    double TotalLightHourschange = 1;
+
     //Simulator& the_connected_sim;
 
 public:
     double getValue() { return Value; };
     double getWaterValue() { return WaterValue; };
-    double getTemperatureValue() { return TemperatureValue; };
-    double getHumidityDirtValue() { return HumidityDirtValue; };
-    double getHumidityAirValue() { return HumidityAirValue; };
-    double getpHValue() { return pHValue; };
+    void addWater(double newWater){WaterValue = +newWater};
     bool getLampValue() { return LampValue; };
+    bool getTimeValue() { return currentTime; };
+    double getTotalLightValue(){return TotalLightHours};
 
-    void SetTime(int hour, int min){
-        TemperatureAcceleration = cos((hour * 60) + (min))};
+    void SetTime(int hour, int min)
+    {
+        currentTime = currentTime + hour + (min / 60);
+    };
 
-    void SimulateTimeSec(int Seconds){
-        double current_time = acos(TemperatureAcceleration)
-            TemperatureValue =
+    void SimulateTime(int HourGot)
+    {
+        //Call to regulator
 
+        WaterValue = WaterValue + (WaterValueChange * HourGot);
+        TotalLightHours = TotalLightHours + (TotalLightHoursChange * HourGot);
+
+        if (LampValue)
+        {
+            TotalLightHours = TotalLightHours + (TotalLightHourschange * HourGot);
+        };
     };
 };
 

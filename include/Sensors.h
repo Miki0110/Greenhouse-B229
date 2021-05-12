@@ -1,33 +1,16 @@
-#ifndef Sensors
-#define Sensors
-
 #include <string>
 #include <time.h>
-#include <Simulator.h>
+#include "Simulator.h"
 
-;
-//time_t timer;
-std::string;
-
-class Sensor //ParentClass
+class BaseSensor //ParentClass
 {
 private:
-    double Value = 0;
-    double inputValue = 0;
+    std::string sensorName;
+
     Simulator &the_connected_sim;
 
 public:
-    Sensor(Simulator &sim) : the_connected_sim(sim)
-    {
-        Value = 5; ///
-    };
-    double getValue() { return the_connected_sim.getValue(); };
-    double getInputValue() { return inputValue; };
+    BaseSensor(Simulator &sim, std::string name) : the_connected_sim(sim), sensorName(name){};
+
+    virtual double measure();
 };
-
-void getInputValue()
-{
-    // GUI.Sim.get
-}
-
-#endif //Sensors
