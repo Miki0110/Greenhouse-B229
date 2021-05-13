@@ -11,6 +11,7 @@
 
 //time_t timer;
 std::string;
+BaseControl Control;
 
 int main(int argc, char const *argv[])
 {
@@ -36,11 +37,7 @@ int main(int argc, char const *argv[])
     See if changes is needed
     Edit if nessesary
     */
-
-        //WaterChanges
-
-        //LampChanges
-        Control.LightValue();
+        Control.UpdateValues();
 
         // check all the window's events that were triggered since the last
         // iteration of the loop
