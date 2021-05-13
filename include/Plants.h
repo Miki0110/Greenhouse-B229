@@ -5,18 +5,26 @@
 class Plant
 {
 private:
-    double lightIdeal = 0;
-    double waterIdeal = 0;
-    double humidityDirtIdeal = 0;
-    double humidityAirIdeal = 0;
-    double pHIdeal = 0;
-    double temperatureIdeal = 0;
+    std::string plantName;
+    int lightDesired[2] = {0, 0};
+    int waterDesired[2] = {0, 0};
+    int humidityDirtDesired[2] = {0, 0};
+    int humidityAirDesired[2] = {0, 0};
+    int pHDesired[2] = {0, 0};
+    int temperatureDesired[2] = {0, 0};
 
 public:
-    double getLightIdeal() { return lightIdeal; };
-    double getWaterIdeal() { return waterIdeal; };
-    double getHumidityDirtIdeal() { return humidityDirtIdeal; };
-    double getHumidityAirIdeal() { return humidityAirIdeal; };
-    double getpHIdeal() { return pHIdeal; };
-    double getTemeratureIdeal() { return temperatureIdeal; };
+    Plant(int lightMax, int lightMin, int waterMax, int waterMin)
+    {
+        lightDesired[0] = lightMin;
+        lightDesired[1] = lightMax;
+        waterDesired[0] = waterMin;
+        waterDesired[1] = waterMax;
+    };
+    int getLightDesired(int i) { return lightDesired[i]; };
+    int getWaterDesired(int i) { return waterDesired[i]; };
+    int getHumidityDirtDesired(int i) { return humidityDirtDesired[i]; };
+    int getHumidityAirDesired(int i) { return humidityAirDesired[i]; };
+    int getpHDesired(int i) { return pHDesired[i]; };
+    int getTemeratureDesired(int i) { return temperatureDesired[i]; };
 };
