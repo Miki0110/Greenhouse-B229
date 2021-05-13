@@ -6,10 +6,11 @@
 class LightRegulator : public BaseRegulator
 {
 private:
-    //    Simulator &the_connected_sim;
+    float regulateData;
 
 public:
     //double measure() override { return the_connected_sim.getLampValue(); };
 
-    void regulate(float LampState) override { &the_connected_sim.setLampValue(LampState); };
+    void regulate(float LampState) override { the_connected_sim.setLampValue((bool)LampState); };
+    virtual float regulateConversion();
 };

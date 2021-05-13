@@ -12,6 +12,7 @@
 //time_t timer;
 std::string;
 BaseControl Control;
+Simulator Simulate;
 
 int main(int argc, char const *argv[])
 {
@@ -57,6 +58,8 @@ int main(int argc, char const *argv[])
 
         // end the current frame
         window.display();
+
+        Simulate.SimulateTime(1);
 
         //Calculate the running speed
         clock_t endTime = clock();

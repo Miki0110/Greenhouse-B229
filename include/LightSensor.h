@@ -6,10 +6,9 @@
 class LightSensor : public BaseSensor
 {
 private:
-    float Value = 0;
-    float rawMeasurementData;
-    Simulator &the_connected_sim;
+    float measurementData;
 
 public:
     float measure() override { return the_connected_sim.getTotalLightValue(); };
+    virtual float measurementConversion();
 };

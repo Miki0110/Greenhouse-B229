@@ -9,7 +9,7 @@
 
 class BaseControl //ParentClass
 {
-private:
+protected:
     Plant &OurPlant;
     LightSensor SensorLight;
     WaterSensor SensorWater;
@@ -17,7 +17,8 @@ private:
     WaterRegulator RegulatorforWater;
 
 public:
-    BaseControl(Plant &plant) : OurPlant(plant){};
+    BaseControl(Plant &plant, LightSensor SensL, WaterSensor SensW, LightRegulator RegL, WaterRegulator RegW) : OurPlant(plant), SensorLight(SensL), SensorWater(SensW), RegulatorforLight(RegL), RegulatorforWater(RegW){};
+    //BaseSensor(Simulator &sim, std::string name) : the_connected_sim(sim), sensorName(name){};
 
     void updateLight()
     {
@@ -37,13 +38,16 @@ public:
         //Under Minimum
         if (OurPlant.getWaterDesired(0) > SensorWater.measure())
         {
-            RegulatorforWater.regulate(0);
+            //Filling water from current pos, to max
+            RegulatorforWater.regulate(OurPlant.getWaterDesired(1) - SensorWater.measure());
         }
+        /*
         //Over Maximum
         if (OurPlant.getWaterDesired(1) < SensorWater.measure())
         {
             RegulatorforWater.regulate(0);
         }
+        */
     };
 
     void UpdateValues()

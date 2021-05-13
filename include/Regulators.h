@@ -4,15 +4,13 @@
 
 class BaseRegulator //ParentClass
 {
-private:
-    std::string regulatorName;
 
 public:
     BaseRegulator(Simulator &sim, std::string name) : the_connected_sim(sim), regulatorName(name){};
 
     virtual void regulate(float);
-    //void regulate(double newWater) override {&the_connected_sim.addWater(newWater)};
-    //void regulate(bool LampState) override {&the_connected_sim.LampValue(LampState)};
+
 protected:
+    std::string regulatorName;
     Simulator &the_connected_sim;
 };

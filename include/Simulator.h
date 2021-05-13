@@ -17,7 +17,7 @@ private:
 
 public:
     float getWaterValue() { return WaterValue; };
-    void addWater(float newWater) { WaterValue = +newWater; };
+    void addWater(float &newWater) { WaterValue = +newWater; };
     bool getLampValue() { return LampValue; };
     void setLampValue(bool i) { LampValue = i; };
     bool getTimeValue() { return currentTime; };
