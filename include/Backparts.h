@@ -1,5 +1,4 @@
-#ifndef Backparts
-#define Backparts
+#pragma once
 
 #include <string>
 #include <time.h>
@@ -12,8 +11,6 @@ class Backpart
 private:
 public:
 };
-
-#endif //Backparts
 
 /*
 

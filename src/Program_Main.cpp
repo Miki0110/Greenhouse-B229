@@ -11,13 +11,17 @@
 
 //time_t timer;
 std::string;
-BaseControl Control;
-Simulator Simulate;
 
 int main(int argc, char const *argv[])
 {
     //          (lightMax, lightMin, waterMax, waterMin)
     Plant Box1_Plant(1, 2, 3, 4);
+    Simulator Sim;
+    LightSensor SensorLight(Sim);
+    WaterSensor SensorWater(Sim);
+    LightRegulator RegulatorforLight(Sim);
+    WaterRegulator RegulatorforWater(Sim);
+    BaseControl Control(Box1_Plant, , , , );
 
     Box1_Plant.getWaterDesired(1);
 
@@ -59,7 +63,8 @@ int main(int argc, char const *argv[])
         // end the current frame
         window.display();
 
-        Simulate.SimulateTime(1);
+        //Simulate 1 day
+        Sim.SimulateTime(1);
 
         //Calculate the running speed
         clock_t endTime = clock();
@@ -69,12 +74,3 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
-
-/*
-lock_t startTime = clock();
-doSomeOperation();
-clock_t endTime = clock();
-clock_t clockTicksTaken = endTime - startTime;
-double timeInSeconds = clockTicksTaken / (double) CLOCKS_PER_SEC;
-
-*/

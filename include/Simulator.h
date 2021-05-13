@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <time.h>
 //#include <Sensors.h>
@@ -41,3 +43,5 @@ public:
         };
     };
 };
+
+//#endif //Simulator

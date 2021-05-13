@@ -1,3 +1,5 @@
+#pragma once
+
 #include <Sensors.h>
 #include "LightSensor.h"
 #include "WaterSensor.h"
@@ -19,6 +21,7 @@ protected:
 public:
     BaseControl(Plant &plant, LightSensor SensL, WaterSensor SensW, LightRegulator RegL, WaterRegulator RegW) : OurPlant(plant), SensorLight(SensL), SensorWater(SensW), RegulatorforLight(RegL), RegulatorforWater(RegW){};
     //BaseSensor(Simulator &sim, std::string name) : the_connected_sim(sim), sensorName(name){};
+    //BaseControl(Plant &plant) : OurPlant(plant){};
 
     void updateLight()
     {

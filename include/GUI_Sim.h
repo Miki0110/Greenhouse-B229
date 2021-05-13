@@ -1,4 +1,6 @@
 /*
+#pragma once
+
 #include <string>
 #include <time.h>
 #include "imgui.h"      // necessary for ImGui::*, imgui-SFML.h doesn't include imgui.h
