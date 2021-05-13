@@ -1,19 +1,6 @@
-//#ifndef Simulator
-//#define Simulator
-
 #include <string>
 #include <time.h>
-#include <Sensors.h>
-
-//time_t timer;
-std::string;
-/*
-1 døgn svarer til 360 grader
-derfor
-1 t     = 360/24 grader
-1 min   = 360/1440 grader
-1 sek   = 360/86400 grader
-*/
+//#include <Sensors.h>
 
 class Simulator //Class
 {
@@ -29,13 +16,12 @@ private:
     //Simulator& the_connected_sim;
 
 public:
-    double getValue() { return Value; };
     float getWaterValue() { return WaterValue; };
-    void addWater(float newWater){WaterValue = +newWater};
+    void addWater(float newWater) { WaterValue = +newWater; };
     bool getLampValue() { return LampValue; };
     void setLampValue(bool i) { LampValue = i; };
     bool getTimeValue() { return currentTime; };
-    float getTotalLightValue(){return TotalLightHours};
+    float getTotalLightValue() { return TotalLightHours; };
 
     void SetTime(int hour, int min)
     {
@@ -47,7 +33,7 @@ public:
         //Call to regulator
 
         WaterValue = WaterValue + (WaterValueChange * HourGot);
-        TotalLightHours = TotalLightHours + (TotalLightHoursChange * HourGot);
+        TotalLightHours = TotalLightHours + (TotalLightHourschange * HourGot);
 
         if (LampValue)
         {
@@ -55,5 +41,3 @@ public:
         };
     };
 };
-
-//#endif //Simulator

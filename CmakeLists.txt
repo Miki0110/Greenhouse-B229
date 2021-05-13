@@ -6,7 +6,6 @@ add_subdirectory(libs/SFML)
 
 include_directories(libs/SFML/include)
 
-add_executable(Tomato_example src/Tomato_example.cpp)
-add_executable(imgui_example src/imgui_example.cpp)
-target_include_directories(Tomato_example imgui_example PRIVATE include)
-target_link_libraries(Tomato_example imgui_example sfml-graphics sfml-system)
+add_executable(Program_Main src/Program_Main.cpp)
+target_include_directories(Program_Main  PRIVATE include)
+target_link_libraries(Program_Main  sfml-graphics sfml-system)

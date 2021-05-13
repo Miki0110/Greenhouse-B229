@@ -7,10 +7,11 @@ class BaseSensor //ParentClass
 private:
     std::string sensorName;
 
-    Simulator &the_connected_sim;
-
 public:
     BaseSensor(Simulator &sim, std::string name) : the_connected_sim(sim), sensorName(name){};
 
-    virtual double measure();
+    virtual float measure();
+
+protected:
+    Simulator &the_connected_sim;
 };

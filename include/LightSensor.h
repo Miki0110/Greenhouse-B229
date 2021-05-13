@@ -3,7 +3,7 @@
 #include "Simulator.h"
 #include "Sensors.h"
 
-class WaterSensor : public BaseSensor
+class LightSensor : public BaseSensor
 {
 private:
     float Value = 0;
@@ -11,5 +11,5 @@ private:
     Simulator &the_connected_sim;
 
 public:
-    float measure() override { return the_connected_sim.getWaterValue(); };
+    float measure() override { return the_connected_sim.getTotalLightValue(); };
 };

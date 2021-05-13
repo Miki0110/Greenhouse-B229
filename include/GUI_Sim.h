@@ -1,6 +1,3 @@
-#ifndef GUI_Sim
-#define GUI_Sim
-
 #include <string>
 #include <time.h>
 #include "imgui.h"      // necessary for ImGui::*, imgui-SFML.h doesn't include imgui.h
@@ -26,7 +23,6 @@ public:
 
 void CreateSideBar(std::string name, double minValue, double maxValue, std::string Colorget)
 {
-    AccesseriesNumber++;
     std::string name2 = name + "Counter";
     name = name + "Holder";
 
@@ -45,5 +41,3 @@ void CreateSideBar(std::string name, double minValue, double maxValue, std::stri
     name2.setPosition(name.getPosition());
     name2.rotate(180);
 }
-
-#endif //GUI_Sim

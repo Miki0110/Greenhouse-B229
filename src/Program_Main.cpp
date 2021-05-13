@@ -1,5 +1,7 @@
 #include <Sensors.h>
 #include <Plants.h>
+#include "Simulator.h"
+#include <Control.h>
 #include <iostream>
 #include <string>
 #include <thread>
@@ -12,20 +14,33 @@ std::string;
 
 int main(int argc, char const *argv[])
 {
-    /* using namespace std::chrono_literals;
-    int k = 5;
+    //          (lightMax, lightMin, waterMax, waterMin)
+    Plant Box1_Plant(1, 2, 3, 4);
 
-    std::this_thread::sleep_for(1s);
-*/
+    Box1_Plant.getWaterDesired(1);
+
     // create the window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Tomato Simulator");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Greenhouse Simulator");
     window.setFramerateLimit(60);
 
     sf::Clock deltaClock;
 
     while (window.isOpen())
     {
+        //Call Control
+        //Call Simulation
         clock_t startTime = clock();
+
+        /*
+    Get values from sensors
+    See if changes is needed
+    Edit if nessesary
+    */
+
+        //WaterChanges
+
+        //LampChanges
+        Control.LightValue();
 
         // check all the window's events that were triggered since the last
         // iteration of the loop

@@ -1,7 +1,6 @@
+/*
 #include "imgui.h" // necessary for ImGui::*, imgui-SFML.h doesn't include imgui.h
-
 #include "imgui-SFML.h" // for ImGui::SFML::* functions and SFML-specific overloads
-
 #include <SFML/Graphics/CircleShape.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -111,7 +110,7 @@ int main()
     SunLevelCounter.setPosition(SunLevelHolder.getPosition());
     SunLevelCounter.rotate(180);
 
-    /*--------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------//
     sf::Clock deltaClock;
     while (window.isOpen())
     {
@@ -148,7 +147,7 @@ int main()
         {
             SunLevelCounter.setSize(sf::Vector2f(SunLevelCounter.getSize().x, 0.));
         }
-        /*PLANT GROW PART-----------------------------------------------------------------------------------------*/
+        //PLANT GROW PART-----------------------------------------------------------------------------------------//
         if (MainBranch.getSize().y < MainBranchHeightMax && MainBranch.getSize().y >= 0)
         {
             MainBranch.setSize(sf::Vector2f{MainBranch.getSize().x, (float)(MainBranch.getSize().y + ((WaterLevelCounter.getSize().y * 0.0005) * (SunLevelCounter.getSize().y * 0.0025)) * SimulationSpeed / 50)});
@@ -246,3 +245,4 @@ int main()
 
     return 0; //all
 }
+*/
