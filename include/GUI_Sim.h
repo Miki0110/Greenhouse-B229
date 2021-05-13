@@ -1,3 +1,4 @@
+/*
 #include <string>
 #include <time.h>
 #include "imgui.h"      // necessary for ImGui::*, imgui-SFML.h doesn't include imgui.h
@@ -41,3 +42,4 @@ void CreateSideBar(std::string name, double minValue, double maxValue, std::stri
     name2.setPosition(name.getPosition());
     name2.rotate(180);
 }
+*/
