@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.17)
 
 project(greenhouse_control)
 
-add_subdirectory(libs/SFML)
+add_subdirectory(lib/SFML)
 
-include_directories(libs/SFML/include)
+include_directories(lib/SFML/include)
 
 add_executable(Program_Main src/Program_Main.cpp)
 target_include_directories(Program_Main  PRIVATE include)
