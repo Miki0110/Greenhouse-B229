@@ -11,7 +11,7 @@ private:
     float regulateData;
 
 public:
-    //double measure() override { return the_connected_sim.getLampValue(); };
+    LightRegulator(Simulator &sim, std::string name) : BaseRegulator(sim, name){};
 
     void regulate(float LampState) override { the_connected_sim.setLampValue((bool)LampState); };
     virtual float regulateConversion();
