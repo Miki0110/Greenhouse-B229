@@ -10,7 +10,7 @@ class BaseRegulator //ParentClass
 public:
     BaseRegulator(Simulator &sim, std::string name) : the_connected_sim(sim), regulatorName(name){};
 
-    virtual void regulate(float);
+    virtual void regulate(float){};
 
 protected:
     std::string regulatorName;

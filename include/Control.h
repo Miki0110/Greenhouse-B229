@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <Sensors.h>
 #include "LightSensor.h"
 #include "WaterSensor.h"
@@ -26,12 +27,12 @@ public:
     void updateLight()
     {
         //Under Minimum
-        if (OurPlant.getLightDesired(0) > SensorLight.measure())
+        if (OurPlant.getLightDesired(0) >= SensorLight.measure())
         {
             RegulatorforLight.regulate(1);
         }
         //Over Maximum
-        if (OurPlant.getLightDesired(1) < SensorLight.measure())
+        if (OurPlant.getLightDesired(1) <= SensorLight.measure())
         {
             RegulatorforLight.regulate(0);
         }

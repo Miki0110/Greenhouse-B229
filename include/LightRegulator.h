@@ -14,5 +14,5 @@ public:
     LightRegulator(Simulator &sim, std::string name) : BaseRegulator(sim, name){};
 
     void regulate(float LampState) override { the_connected_sim.setLampValue((bool)LampState); };
-    virtual float regulateConversion();
+    //virtual float regulateConversion();
 };
