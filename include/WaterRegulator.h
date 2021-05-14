@@ -11,6 +11,8 @@ private:
     float regulateData;
 
 public:
+    WaterRegulator(Simulator &sim, std::string name) : BaseRegulator(sim, name){};
+
     void regulate(float newWater) override { the_connected_sim.addWater(newWater); };
     virtual float regulateConversion();
 };
